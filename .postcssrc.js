@@ -22,13 +22,14 @@ module.exports = {
       minPixelValue: 1, // 设置最小的转换数值，只有大于该值时才会被转换
       mediaQuery: false // 媒体查询里的单位是否需要转换单位
     },
-    "postcss-viewport-units": {},
-    "cssnano": {
+    'postcss-viewport-units': {},
+    cssnano: {
       // 需要安装cssnano-preset-advanced插件
-      preset: 'advanced',
-      autoprefixer: false,
-      // 启用该插件，z-index的值就会重置为1，务必设置为false
-      "postcss-zindex": false
+      'cssnano-preset-advanced': {
+        // 启用该插件，z-index的值就会重置为1，务必设置为false
+        zindex: false,
+        autoprefixer: false
+      }
     }
   }
 };
